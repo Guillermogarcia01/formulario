@@ -1,0 +1,6 @@
+
+
+
+function validarFormulario(){
+    alert("lool");
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <br>
+    <form onsubmit="return validarFormulario()">
+        ingrese el nombre:
+        <input type="text" name="nombre" required>
+        <br>
+        ingrese el apelido:
+        <input type="text" name="apellido" required>
+        <br>
+        ingrese el usuario:
+        <input type="text" name="email" required>
+        <br>
+        seleccione el trabajo
+        <select name="trabajos">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+        </select>
+        <br>
+        seleccione el jefe
+        <select name="jefe">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+        </select>
+        <br>
+        introduzca la fecha de su contratacion
+        <input type="date" name="contratacion" required>
+        <br>
+        introduzca el telefono
+        <input type="number" name="telefono" required>
+        <br>
+        introduzca el salario
+        <input type="number" name="salario" required>
+        <br>
+        introduzca la contraseña de acceso
+        <input type="password" name="contrasenia" required>
+        <br>
+        introduzca la confirmacion de la contraseña
+        <input type="password" name="contraseniaConfirmacion" required>
+        <br>
+        <br>
+        <input type="submit">
+
+    </form>
+
+
+</body>
+
+</html>
