@@ -14,44 +14,48 @@
     <br>
     <form onsubmit="return validarFormulario()">
         ingrese el nombre:
-        <input type="text" name="nombre" required>
+        <input type="text" name="nombre" id="nombre" required>
         <br>
         ingrese el apelido:
-        <input type="text" name="apellido" required>
+        <input type="text" name="apellido" id="apellido"  required>
         <br>
         ingrese el usuario:
-        <input type="text" name="email" required>
+        <input type="text" name="email" id="email"  required>
         <br>
         seleccione el trabajo
-        <select name="trabajos">
-            <option value="volvo">Volvo</option>
-            <option value="saab">Saab</option>
-            <option value="fiat">Fiat</option>
-            <option value="audi">Audi</option>
+        <select name="trabajos" id="trabajos" >
+            <option value="Secretario">Secretario</option>
+            <option value="Staff">Staff</option>
+            <option value="Analyst">Analyst</option>
+            <option value="Vendedor">Vendedor</option>
+            <option value="Manager">Manager</option>
+            <option value="Presdient">Presdient</option>
         </select>
         <br>
         seleccione el jefe
-        <select name="jefe">
-            <option value="volvo">Volvo</option>
-            <option value="saab">Saab</option>
-            <option value="fiat">Fiat</option>
-            <option value="audi">Audi</option>
+        <select name="jefe" id="jefe" >
+            <option value="JuanSmith">Juan Smith</option>
+            <option value="KevilAllen">Kevil Allen</option>
+            <option value="JeanDoyle">Jean Doyle</option>
+            <option value="LynnDennis">Lynn Deniis</option>
+            <option value="CynthiaWard">Cynthia Ward</option>
+            <option value="LeslieBaker">Leslie Baker</option>
         </select>
         <br>
         introduzca la fecha de su contratacion
-        <input type="date" name="contratacion" required>
+        <input type="date" name="contratacion" id="contratacion"  required>
         <br>
         introduzca el telefono
-        <input type="number" name="telefono" required>
+        <input type="number" name="telefono" id="telefono" required>
         <br>
         introduzca el salario
-        <input type="number" name="salario" required>
+        <input type="number" name="salario" id="salario" required>
         <br>
         introduzca la contraseña de acceso
-        <input type="password" name="contrasenia" required>
+        <input type="password" name="contrasenia" id="contrasenia" required>
         <br>
         introduzca la confirmacion de la contraseña
-        <input type="password" name="contraseniaConfirmacion" required>
+        <input type="password" name="contraseniaConfirmacion" id="contraseniaConfirmacion" required>
         <br>
         <br>
         <input type="submit">
