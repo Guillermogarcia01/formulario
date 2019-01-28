@@ -12,15 +12,18 @@
 
 <body>
     <br>
-    <form onsubmit="return validarFormulario()">
-        ingrese el nombre:
+    <form onsubmit="return false" id="formulario" name="formulario">
+        ingrese el nombre(obligatorio):
         <input type="text" name="nombre" id="nombre">
+        <div id="nombreError"></div>
         <br>
         ingrese el apelido:
         <input type="text" name="apellido" id="apellido"  >
+        <div id="apellidoError"></div>
         <br>
         ingrese el email:
         <input type="text" name="email" id="email"  >
+        <div id="emailError"></div>
         <br>
         seleccione el trabajo
         <select name="trabajos" id="trabajos" >
@@ -42,23 +45,29 @@
             <option value="LeslieBaker">Leslie Baker</option>
         </select>
         <br>
+        <br>
         introduzca la fecha de su contratacion
         <input type="date" name="contratacion" id="contratacion"  min="2000-01-01">
+        <div id="fechaContratoError"></div>
         <br>
         introduzca el telefono
         <input type="number" name="telefono" id="telefono" >
+        <div id="telefonoError"></div>
         <br>
         introduzca el salario
         <input type="number" name="salario" id="salario">
+        <div id="salarioError"></div>
         <br>
         introduzca la contraseña de acceso
         <input type="password" name="contrasenia" id="contrasenia" >
+        <div id="contraseniaError"></div>
         <br>
         introduzca la confirmacion de la contraseña
         <input type="password" name="contraseniaConfirmacion" id="contraseniaConfirmacion" >
+        <div id="contraseniaConfirmacionError"></div>
         <br>
         <br>
-        <input type="submit">
+        <input type="submit" onclick="validarFormulario();">
 
     </form>
 

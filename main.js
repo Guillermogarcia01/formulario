@@ -13,33 +13,58 @@ function validarFormulario(){
     var telefono = document.getElementById("telefono").value;
     var sueldo = document.getElementById("salario").value;
     var contrasenia = document.getElementById("contrasenia").value;
+    var contraseniaConfirmacion = document.getElementById("contraseniaConfirmacion").value;
+    var todoCorrecto = true;
 
-
-    if(!validarNombre(nombre))
-        alert("error en el nombre");
+    if(!validarNombre(nombre)){
+        document.getElementById("nombreError").innerHTML = "Error en el nombre";
+        todoCorrecto = false;
+    }
     
-    if(!validarNombre(apellido))
-        alert("error en el apellido");
+    if(!validarNombre(apellido)){
+        document.getElementById("apellidoError").innerHTML = "Error en el apellido";
+        todoCorrecto = false;
+    }
 
-    if(!validarEmail(email))
-        alert("error en el correo");
+    if(!validarEmail(email)){
+        document.getElementById("emailError").innerHTML = "Error en el correo";
+        todoCorrecto = false;
+    }
     
-    if(!valirFecha(contratacion))
-        alert("error en la fecha de contrtacion");
+    if(!valirFecha(contratacion)){
+        document.getElementById("fechaContratoError").innerHTML = "Error en la contrtacion";
+        todoCorrecto = false;
+    }
 
-    if(!valirTelefono(telefono))
-        alert("error en el telefono");
+    if(!valirTelefono(telefono)){
+        document.getElementById("telefonoError").innerHTML = "Error en el telefono";
+        todoCorrecto = false;
+    }
 
-    if(sueldo < 858,55 || sueldo > 12.000)
-        alert("error en el sueldo");
+    if(sueldo < 858,55 || sueldo > 12.000){
+        document.getElementById("salarioError").innerHTML = "Error en el salario";
+        todoCorrecto = false;
+    }
 
-    if(!validarContrasenia(contrasenia))
-        alert("error en el telefono");
+    if(!validarContrasenia(contrasenia)){
+        document.getElementById("contraseniaError").innerHTML = "error en el formato de la contraseña";
+        todoCorrecto = false;
+    }
+
+    if(contrasenia != contraseniaConfirmacion){
+        document.getElementById("contraseniaConfirmacion").innerHTML = "las contraseñas no coinciden";
+        todoCorrecto = false;
+    }
+
+
+    if(todoCorrecto)
+        document.formulario.submit();
+    
 }
 
 function validarNombre(nombre){
 
-    var expresionRegularNombre = new RegExp('^[A-Za-z]{2,15}');
+    var expresionRegularNombre = new RegExp('^[A-Za-z]{2,15}$');
 
 
     if(expresionRegularNombre.test(nombre)){
@@ -55,14 +80,14 @@ function validarNombre(nombre){
 
 function validarEmail(email){
 
-    var expresionRegularNombre = new RegExp('@{1}.{1}');
+    var expresionRegularNombre = new RegExp('^[a-zA-Z0-9]+@pufo\.es$');
 
     if(expresionRegularNombre.test(email)){
         //alert("xd");
         return true;
     }else{
         //alert("error en el nombre");
-        return true;
+        return false;
     }
     
 
@@ -76,7 +101,6 @@ function valirFecha(contratacion){
     var fechaContrato = new Date(contratacion);
 
     if(fechaActual.getTime() < fechaContrato.getTime()){
-        alert("lolo erroe fecha");
         return false;
     }
 
@@ -85,7 +109,7 @@ function valirFecha(contratacion){
 
 function valirTelefono(telefono){
 
-    var expresionRegularTelefono = new RegExp('^[6-7]{1}+[0-9]{8}');
+    var expresionRegularTelefono = new RegExp('^[6|7]{1}[0-9]{8}$');
 
 
     if(expresionRegularTelefono.test(telefono)){
@@ -100,8 +124,14 @@ function valirTelefono(telefono){
 
 function validarContrasenia(contrasenia){
 
-    var expresionRegularContrasenia = new RegExp('+[a-z]+[A-Z]+[0-9]{8,16}+[0-9]{8}');
-
+    var expresionRegularContrasenia = new RegExp('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[#.?¿!@$%^&*-¡]).{8,}$');
+    if(expresionRegularContrasenia.test(contrasenia)){
+        //alert("xd");
+        return true;
+    }else{
+        //alert("error en el nombre");
+        return false;
+    }
     
 
 }
