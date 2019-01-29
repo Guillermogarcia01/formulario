@@ -68,10 +68,8 @@ function validarNombre(nombre){
 
 
     if(expresionRegularNombre.test(nombre)){
-        //alert("xd");
         return true;
     }else{
-        //alert("error en el nombre");
         return false;
     }
 
@@ -83,10 +81,8 @@ function validarEmail(email){
     var expresionRegularNombre = new RegExp('^[a-zA-Z0-9]+@pufo\.es$');
 
     if(expresionRegularNombre.test(email)){
-        //alert("xd");
         return true;
     }else{
-        //alert("error en el nombre");
         return false;
     }
     
@@ -113,10 +109,8 @@ function valirTelefono(telefono){
 
 
     if(expresionRegularTelefono.test(telefono)){
-        //alert("xd");
         return true;
     }else{
-        //alert("error en el nombre");
         return false;
     }
 
@@ -126,10 +120,8 @@ function validarContrasenia(contrasenia){
 
     var expresionRegularContrasenia = new RegExp('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[#.?¿!@$%^&*-¡]).{8,}$');
     if(expresionRegularContrasenia.test(contrasenia)){
-        //alert("xd");
         return true;
     }else{
-        //alert("error en el nombre");
         return false;
     }
     
