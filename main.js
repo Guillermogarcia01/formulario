@@ -42,7 +42,7 @@ function validarFormulario(){
         todoCorrecto = false;
     }
     
-    if(!valirFecha(contratacion)){
+    if(!valirFecha(contratacion) || contratacion == ""){
         document.getElementById("fechaContratoError").style.visibility = "visible";
         document.getElementById("fechaContratoError").innerHTML = "Error en la contrtacion";
         todoCorrecto = false;
@@ -54,7 +54,7 @@ function validarFormulario(){
         todoCorrecto = false;
     }
 
-    if(parseInt(sueldo) < 858.55 || parseInt(sueldo) > 12000){
+    if(parseInt(sueldo) < 858.55 || parseInt(sueldo) > 12000 || sueldo == "") {
         document.getElementById("salarioError").style.visibility = "visible";
         document.getElementById("salarioError").innerHTML = "Error en el salario";
         todoCorrecto = false;
@@ -72,16 +72,16 @@ function validarFormulario(){
         todoCorrecto = false;
     }
 
-    setCookie(cookieEmail, email);
-    setCookie(cookieContrasenia, contrasenia);
-
-    if(todoCorrecto)
-        document.formulario.submit();
+    
+    if(todoCorrecto){
+        setCookie('cookieEmail', email);
+        setCookie('cookieContrasenia', contrasenia);
+    }
     
 }
 
 function setCookie(cname, cvalue) {
-    var exdays = 0;
+    var exdays = 1;
     var d = new Date();
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
     var expires = "expires="+ d.toUTCString();
@@ -104,7 +104,7 @@ function validarNombre(nombre){
 
 function validarEmail(email){
 
-    var expresionRegularNombre = new RegExp('^[a-zA-Z0-9]+@pufo\.es$');
+    var expresionRegularNombre = new RegExp('^[a-zA-Z0-9]*?.+@pufo\.es$');
 
     if(expresionRegularNombre.test(email)){
         return true;

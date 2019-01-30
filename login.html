@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,15 +8,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 </head>
+
 <body>
     <br>
 
     <form>
-        Ingrese el usuario: <input type="text" >
+        Ingrese el usuario: <input type="text" id="email">
         <br>
         <br>
-        ingrese la contraseña: <input type="password">
+        ingrese la contraseña: <input type="password" id="password">
+        <input type="submit" onclick="logearse();">
+
     </form>
 
 </body>
+
 </html>
+
+<script>
+
+    function logearse() {
+        var email = document.getElementById("email").value;
+        var contrasenia = document.getElementById("password").value;
+
+        var emailCookie = getCookie("cookieEmail");
+        var contraseniaCookie = getCookie("cookieContrasenia");
+
+        if(email == emailCookie)
+            alert("lol correcto");
+
+        if(contrasenia == contraseniaCookie)
+            alert("lol correcto 2");
+
+
+    }
+
+
+    
+
+    function getCookie(cname) {
+        var name = cname + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+
+</script>
