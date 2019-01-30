@@ -22,7 +22,7 @@ Esta fecha es erroenea ya que el día que la probaba era día 30, por tanto era 
 
 ![](imagenes/CapturaFechaMal.PNG)
 
-Tras ello pruebo una inferior a la actual, la cual es correcta.
+Tras ello pruebo con la fecha actual, la cual es correcta.
 
 ![](imagenes/CapturaFechaBIen.PNG)
 
