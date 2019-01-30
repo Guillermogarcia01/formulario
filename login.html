@@ -12,7 +12,7 @@
 <body>
     <br>
 
-    <form>
+    <form onsubmit="return false">
         Ingrese el usuario: <input type="text" id="email">
         <br>
         <br>
@@ -28,17 +28,15 @@
 <script>
 
     function logearse() {
+
         var email = document.getElementById("email").value;
         var contrasenia = document.getElementById("password").value;
 
         var emailCookie = getCookie("cookieEmail");
         var contraseniaCookie = getCookie("cookieContrasenia");
 
-        if(email == emailCookie)
-            alert("lol correcto");
-
-        if(contrasenia == contraseniaCookie)
-            alert("lol correcto 2");
+        if(email == emailCookie && contrasenia == contraseniaCookie)
+            location.href ="menu.html";
 
 
     }

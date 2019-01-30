@@ -23,6 +23,8 @@ function validarFormulario(){
     document.getElementById("salarioError").style.visibility = "hidden";
     document.getElementById("contraseniaError").style.visibility = "hidden";
     document.getElementById("contraseniaConfirmacionError").style.visibility = "hidden";
+    document.getElementById("usuarioCreado").style.visibility = "hidden";
+
 
     if(!validarNombre(nombre)){
         document.getElementById("nombreError").style.visibility = "visible";
@@ -72,10 +74,12 @@ function validarFormulario(){
         todoCorrecto = false;
     }
 
-    
     if(todoCorrecto){
         setCookie('cookieEmail', email);
         setCookie('cookieContrasenia', contrasenia);
+        document.getElementById("usuarioCreado").style.visibility = "visible";
+        document.getElementById("usuarioCreado").innerHTML = "Usuario creado correctamente";
+
     }
     
 }
@@ -152,4 +156,9 @@ function validarContrasenia(contrasenia){
     }
     
 
+}
+
+
+function logearse(){
+    location.href ="login.html";
 }
