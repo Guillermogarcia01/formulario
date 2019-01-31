@@ -52,3 +52,11 @@ Ahora coloco una correcta, y coloco esa contraseña en el campo de confirmación
 ![](imagenes/CapturaContraseniaBien.PNG)
 
 
+Al darle a registrar se crea la cookie.
+![](imagenes/CapturaCookiesSesion.PNG)
+
+Tras ello accedo a la página y compruebo que se han creado la cookie de sesion.
+![](imagenes/CapturaCookieSesionCreada.PNG)
+
+
+
