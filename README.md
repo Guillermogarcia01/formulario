@@ -59,4 +59,6 @@ Tras ello accedo a la página y compruebo que se han creado la cookie de sesion.
 ![](imagenes/CapturaCookieSesionCreada.PNG)
 
 
+Para finalizar cierro la sesión borrando la cookie de sesión.
+![](imagenes/CapturaCookieBorrandose.PNG)
 
