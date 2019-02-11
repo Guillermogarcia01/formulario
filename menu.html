@@ -10,7 +10,7 @@
 </head>
 <body>
     
-    <h1>Sesion iniciada correctamente</h1>
+    <h1 id="titulo"></h1>
     <button type="button" onclick="borrarCookies();">Borrar cookie de sesión</button>
 
 </body>
@@ -19,6 +19,7 @@
 
 <script>
     comrpobarSesion();
+    iniciarSesion();
     function comrpobarSesion(){
         
         var cookieSesion = getCookie('cookieSesion');
@@ -52,5 +53,12 @@
         }
         return "";
     }
+
+    function iniciarSesion(){
+        var cookieEmail = getCookie('cookieEmail');
+        document.getElementById("titulo").innerHTML = "Sesion iniciada correctamente, bienvenido " + cookieEmail;
+
+    }
+
 
 </script>
