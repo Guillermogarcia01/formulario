@@ -40,10 +40,14 @@
         var emailCookie = getCookie("cookieEmail");
         var contraseniaCookie = getCookie("cookieContrasenia");
 
-        if (email == emailCookie && contrasenia == contraseniaCookie)
+        if (email == emailCookie && contrasenia == contraseniaCookie && email != ""){
             location.href = "menu.html";
+            setCookie('cookieSesion','iniciado');
 
-        setCookie('cookieSesion','iniciado');
+        }
+        else{
+            alert("usuario incorrecto");
+        }
 
     }
 
